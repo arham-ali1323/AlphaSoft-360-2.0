@@ -1,0 +1,1 @@
+AlphaSoft-360 2.0 is a modern IT services website built with React, Vite, Tailwind CSS and Framer Motion. It includes animated hero sections, services, portfolio, team, FAQs and contact pages to showcase a software company’s digital solutions.
