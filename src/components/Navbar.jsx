@@ -44,8 +44,12 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <RouterLink to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold gradient-text">TechVision</h1>
+            <RouterLink to="/" className="flex-shrink-0 flex items-center">
+              <img 
+                src="/src/assets/img/AlphaSoft_logo.png" 
+                alt="AlphaSoft360 Logo" 
+                className="h-8 w-auto"
+              />
             </RouterLink>
           </motion.div>
 
