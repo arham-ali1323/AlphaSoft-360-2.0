@@ -1,0 +1,41 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import TopBar from './components/TopBar.jsx';
+import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Services from './pages/Services.jsx';
+import Projects from './pages/Projects.jsx';
+import Team from './pages/Team.jsx';
+import TeamMemberDetails from './pages/TeamMemberDetails.jsx';
+import ProjectDetails from './pages/ProjectDetails.jsx';
+import FAQ from './pages/FAQ.jsx';
+import Contact from './pages/Contact.jsx';
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-dark-900 text-white">
+        <TopBar />
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectDetails />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/team/:id" element={<TeamMemberDetails />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
