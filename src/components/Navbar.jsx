@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useScroll } from '../contexts/ScrollContext.jsx';
+import logo from '../assets/img/AlphaSoft_logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ const Navbar = () => {
           >
             <RouterLink to="/" className="flex-shrink-0 flex items-center">
               <img 
-                src="/src/assets/img/AlphaSoft_logo.png" 
+                src={logo} 
                 alt="AlphaSoft360 Logo" 
                 className="h-8 w-auto"
               />
