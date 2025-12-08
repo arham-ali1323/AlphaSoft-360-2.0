@@ -67,7 +67,7 @@ const Portfolio = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {projects.map((project) => (
             <motion.div
@@ -80,7 +80,7 @@ const Portfolio = () => {
               {/* Project Card */}
               <div className="glass-effect rounded-2xl overflow-hidden border border-white/10 h-full transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary-500/20">
                 {/* Project Image */}
-                <div className={`h-64 relative overflow-hidden bg-gray-800`}>
+                <div className={`h-48 sm:h-56 md:h-64 relative overflow-hidden bg-gray-800`}>
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -90,15 +90,15 @@ const Portfolio = () => {
                   
                   {/* Overlay Actions */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" onClick={(e) => e.stopPropagation()}>
-                    <div className="flex gap-4">
+                    <div className="flex gap-3 sm:gap-4">
                       {project.link && project.link !== '#' && (
                         <a
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
+                          className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
                         >
-                          <ExternalLink className="w-5 h-5 text-white" />
+                          <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                         </a>
                       )}
                       {project.github && project.github !== '#' && (
@@ -106,9 +106,9 @@ const Portfolio = () => {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
+                          className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors"
                         >
-                          <Github className="w-5 h-5 text-white" />
+                          <Github className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                         </a>
                       )}
                     </div>
@@ -116,21 +116,21 @@ const Portfolio = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-primary-400 transition-colors">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-300 mb-4 line-clamp-2">
+                  <p className="text-gray-300 mb-3 sm:mb-4 line-clamp-2 text-sm sm:text-base">
                     {project.description}
                   </p>
 
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                     {project.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-primary-500/20 text-primary-400 text-xs rounded-full border border-primary-500/30"
+                        className="px-2 sm:px-3 py-0.5 sm:py-1 bg-primary-500/20 text-primary-400 text-xs rounded-full border border-primary-500/30"
                       >
                         {tech}
                       </span>
@@ -140,8 +140,8 @@ const Portfolio = () => {
                   {/* Features */}
                   <div className="space-y-1">
                     {project.features.slice(0, 2).map((feature, index) => (
-                      <div key={index} className="flex items-center text-gray-400 text-sm">
-                        <ChevronRight className="w-3 h-3 mr-2 text-primary-400" />
+                      <div key={index} className="flex items-center text-gray-400 text-xs sm:text-sm">
+                        <ChevronRight className="w-3 h-3 mr-1 sm:mr-2 text-primary-400" />
                         {feature}
                       </div>
                     ))}

@@ -66,7 +66,7 @@ const Services = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {servicesData.map((service) => (
             <motion.div
@@ -77,9 +77,9 @@ const Services = () => {
               onClick={() => handleServiceClick(service.id)}
             >
               {/* Card */}
-              <div className="glass-effect rounded-2xl p-8 h-full transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary-500/20 border border-white/10">
+              <div className="glass-effect rounded-2xl p-6 sm:p-8 h-full transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary-500/20 border border-white/10">
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-xl overflow-hidden mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl overflow-hidden mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                   <img 
                     src={service.img} 
                     alt={service.title}
@@ -88,19 +88,19 @@ const Services = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-primary-400 transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-primary-400 transition-colors">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   {service.description}
                 </p>
 
                 {/* Skills Preview */}
-                <div className="space-y-2">
+                <div className="space-y-1 sm:space-y-2">
                   {service.skills.slice(0, 3).map((skill, idx) => (
-                    <div key={idx} className="flex items-center text-gray-400 text-sm">
-                      <div className="w-1.5 h-1.5 bg-primary-400 rounded-full mr-3"></div>
+                    <div key={idx} className="flex items-center text-gray-400 text-xs sm:text-sm">
+                      <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-primary-400 rounded-full mr-2 sm:mr-3"></div>
                       <span>{skill.name}</span>
                     </div>
                   ))}
@@ -110,7 +110,7 @@ const Services = () => {
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-500/20 to-primary-600/20 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
                 
                 {/* Click Hint */}
-                <div className="absolute bottom-4 left-4 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
                   Click for details
                 </div>
               </div>

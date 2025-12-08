@@ -18,9 +18,12 @@ import Contact from './pages/Contact.jsx';
 
 function App() {
   return (
-    <Router>
+    <Router future={{ 
+  v7_startTransition: true,
+  v7_relativeSplatPath: true 
+}}>
       <ScrollProvider>
-        <div className="min-h-screen bg-dark-900 text-white">
+        <div className="min-h-screen bg-dark-900 text-white overflow-x-hidden w-full max-w-full">
           <TopBar />
           <Navbar />
           <Layout>

@@ -66,7 +66,7 @@ const Team = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
         >
           {teamMembers.slice(0, 4).map((member) => (
             <motion.div
@@ -77,10 +77,10 @@ const Team = () => {
               onClick={() => handleMemberClick(member.id)}
             >
               {/* Team Member Card */}
-              <div className="glass-effect rounded-2xl p-6 h-full border border-white/10 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary-500/20">
+              <div className="glass-effect rounded-2xl p-4 sm:p-6 h-full border border-white/10 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary-500/20">
                 {/* Avatar */}
-                <div className="flex justify-center mb-4">
-                  <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                <div className="flex justify-center mb-3 sm:mb-4">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold group-hover:scale-110 transition-transform duration-300 overflow-hidden">
                     <img 
                       src={member.image} 
                       alt={member.name}
@@ -90,26 +90,26 @@ const Team = () => {
                 </div>
 
                 {/* Name & Position */}
-                <div className="text-center mb-4">
-                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-primary-400 transition-colors">
+                <div className="text-center mb-3 sm:mb-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 group-hover:text-primary-400 transition-colors">
                     {member.name}
                   </h3>
-                  <p className="text-primary-400 text-sm font-medium">
+                  <p className="text-primary-400 text-xs sm:text-sm font-medium">
                     {member.role}
                   </p>
                 </div>
 
                 {/* Bio */}
-                <p className="text-gray-300 text-sm mb-4 text-center leading-relaxed">
+                <p className="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 text-center leading-relaxed">
                   {member.bio}
                 </p>
 
                 {/* Skills */}
-                <div className="flex flex-wrap gap-2 justify-center mb-4">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center mb-3 sm:mb-4">
                   {member.skills.slice(0, 3).map((skill, index) => (
                     <span
                       key={index}
-                      className="px-2 py-1 bg-primary-500/20 text-primary-400 text-xs rounded-full border border-primary-500/30"
+                      className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary-500/20 text-primary-400 text-xs rounded-full border border-primary-500/30"
                     >
                       {skill.name}
                     </span>
@@ -117,33 +117,35 @@ const Team = () => {
                 </div>
 
                 {/* Social Links */}
-                <div className="flex justify-center gap-3 pt-4 border-t border-white/10" onClick={(e) => e.stopPropagation()}>
-                  {member.socials.linkedin && (
-                    <a
-                      href={member.socials.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-500/20 transition-colors group/link"
-                    >
-                      <Linkedin className="w-4 h-4 text-gray-400 group-hover/link:text-primary-400" />
-                    </a>
-                  )}
+                <div className="flex justify-center gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/10" onClick={(e) => e.stopPropagation()}>
                   {member.socials.github && (
                     <a
                       href={member.socials.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-500/20 transition-colors group/link"
+                      className="w-7 h-7 sm:w-8 sm:h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-500/20 transition-colors group/link"
                     >
-                      <Github className="w-4 h-4 text-gray-400 group-hover/link:text-primary-400" />
+                      <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 group-hover/link:text-primary-400" />
                     </a>
                   )}
-                  <a
-                    href={`mailto:${member.contact.email}`}
-                    className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-500/20 transition-colors group/link"
-                  >
-                    <Mail className="w-4 h-4 text-gray-400 group-hover/link:text-primary-400" />
-                  </a>
+                  {member.socials.twitter && (
+                    <a
+                      href={member.socials.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-7 h-7 sm:w-8 sm:h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-500/20 transition-colors group/link"
+                    >
+                      <Twitter className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 group-hover/link:text-primary-400" />
+                    </a>
+                  )}
+                  {member.socials.email && (
+                    <a
+                      href={`mailto:${member.socials.email}`}
+                      className="w-7 h-7 sm:w-8 sm:h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-500/20 transition-colors group/link"
+                    >
+                      <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 group-hover/link:text-primary-400" />
+                    </a>
+                  )}
                 </div>
 
                 {/* Click hint */}

@@ -30,17 +30,20 @@ const TopBar = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row justify-between items-center py-2">
               {/* Contact Info */}
-              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 mb-2 sm:mb-0">
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-4 mb-2 sm:mb-0">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
                     href={info.href}
-                    className="flex items-center text-gray-300 hover:text-primary-400 transition-colors text-sm"
+                    className="flex items-center text-gray-300 hover:text-primary-400 transition-colors text-xs sm:text-sm"
                     target={info.icon === Mail ? '_self' : '_blank'}
                     rel={info.icon === Mail ? '' : 'noopener noreferrer'}
                   >
                     <info.icon className="w-3 h-3 mr-1" />
-                    <span>{info.value}</span>
+                    <span className="hidden xs:inline">{info.value}</span>
+                    <span className="xs:hidden">
+                      {info.icon === Mail ? 'Email' : info.icon === Phone ? 'Phone' : 'Location'}
+                    </span>
                   </a>
                 ))}
               </div>
