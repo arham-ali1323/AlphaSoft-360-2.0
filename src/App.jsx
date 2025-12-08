@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import Layout from './components/Layout.jsx';
+import { ScrollProvider } from './contexts/ScrollContext.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Services from './pages/Services.jsx';
@@ -16,24 +18,26 @@ import Contact from './pages/Contact.jsx';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-dark-900 text-white">
-        <TopBar />
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:id" element={<ProjectDetails />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/team/:id" element={<TeamMemberDetails />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <ScrollProvider>
+        <div className="min-h-screen bg-dark-900 text-white">
+          <TopBar />
+          <Navbar />
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:id" element={<ProjectDetails />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/team/:id" element={<TeamMemberDetails />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Layout>
+          <Footer />
+        </div>
+      </ScrollProvider>
     </Router>
   );
 }
