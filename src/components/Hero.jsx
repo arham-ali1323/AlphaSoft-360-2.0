@@ -30,14 +30,14 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 overflow-x-hidden w-full max-w-full">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-primary-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950/30"></div>
       
-      {/* Animated Grid */}
+      {/* Professional Grid Pattern */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b20_1px,transparent_1px),linear-gradient(to_bottom,#1e293b20_1px,transparent_1px)] bg-[size:20px_20px]"></div>
       </div>
 
-      {/* Floating Orbs */}
+      {/* Professional Floating Elements */}
       <motion.div
         animate={{
           y: [0, -30, 0],
@@ -48,7 +48,7 @@ const Hero = () => {
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className="absolute top-20 left-10 lg:left-20 w-48 h-48 lg:w-72 lg:h-72 bg-primary-500/20 rounded-full filter blur-3xl"
+        className="absolute top-20 left-10 lg:left-20 w-48 h-48 lg:w-72 lg:h-72 bg-blue-500/10 rounded-full filter blur-3xl"
       />
       <motion.div
         animate={{
@@ -61,7 +61,7 @@ const Hero = () => {
           repeatType: "reverse",
           delay: 2,
         }}
-        className="absolute bottom-20 right-10 lg:right-20 w-64 h-64 lg:w-96 lg:h-96 bg-purple-500/20 rounded-full filter blur-3xl"
+        className="absolute bottom-20 right-10 lg:right-20 w-64 h-64 lg:w-96 lg:h-96 bg-indigo-500/10 rounded-full filter blur-3xl"
       />
 
       {/* Content */}
@@ -72,13 +72,13 @@ const Hero = () => {
           animate="visible"
           className="text-center"
         >
-          {/* Badge */}
+          {/* Professional Badge */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center px-4 py-2 rounded-full glass-effect mb-6"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 mb-6"
           >
-            <Star className="w-4 h-4 text-primary-400 mr-2" />
-            <span className="text-sm text-gray-300">Premium IT Solutions</span>
+            <div className="w-2 h-2 bg-blue-400 rounded-full mr-2 animate-pulse"></div>
+            <span className="text-sm text-blue-300 font-medium">Enterprise Solutions</span>
           </motion.div>
 
           {/* Main Heading */}
