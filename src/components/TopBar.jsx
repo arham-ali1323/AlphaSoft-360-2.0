@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 import { useScroll } from '../contexts/ScrollContext.jsx';
 
 const TopBar = () => {
@@ -9,14 +9,12 @@ const TopBar = () => {
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' }
   ];
 
   const contactInfo = [
-    { icon: Mail, value: 'hello@techvision.com', href: 'mailto:hello@techvision.com' },
-    { icon: Phone, value: '+92 370 4857471', href: 'tel:+923704857471' },
-    { icon: MapPin, value: 'San Francisco, CA', href: '#' }
+    { icon: Mail, value: 'alphasoft360@gmail.com', href: 'mailto:alphasoft360@gmail.com?subject=Inquiry from AlphaSoft360 Website' },
+    { icon: Phone, value: '+92 370 4857471', href: 'https://wa.me/923704857471?text=Hello AlphaSoft360, I found your website and would like to inquire about your services.' },
+    { icon: MapPin, value: 'Main Pakavenue Rd, Sahiwal, 57000, Pakistan', href: 'https://maps.google.com/?q=Main+Pakavenue+Rd+Sahiwal+57000+Pakistan' }
   ];
 
   return (
@@ -38,10 +36,11 @@ const TopBar = () => {
                     key={index}
                     href={info.href}
                     className="flex items-center text-gray-300 hover:text-primary-400 transition-colors text-sm"
+                    target={info.icon === Mail ? '_self' : '_blank'}
+                    rel={info.icon === Mail ? '' : 'noopener noreferrer'}
                   >
                     <info.icon className="w-3 h-3 mr-1" />
-                    <span className="hidden xs:inline">{info.value}</span>
-                    <span className="xs:hidden">{info.value.split(' ')[0]}</span>
+                    <span>{info.value}</span>
                   </a>
                 ))}
               </div>

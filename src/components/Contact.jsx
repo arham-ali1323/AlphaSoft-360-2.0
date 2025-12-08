@@ -41,20 +41,20 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@techvision.com',
-      link: 'mailto:hello@techvision.com'
+      value: 'alphasoft360@gmail.com',
+      link: 'mailto:alphasoft360@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+92 370 4857471',
+      link: 'tel:+923704857471'
     },
     {
       icon: MapPin,
       label: 'Office',
-      value: 'San Francisco, CA',
-      link: '#'
+      value: 'Main Pakavenue Rd, Sahiwal, 57000, Pakistan',
+      link: 'https://maps.google.com/?q=Main+Pakavenue+Rd+Sahiwal+57000+Pakistan'
     }
   ];
 

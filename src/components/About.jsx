@@ -6,41 +6,41 @@ const About = () => {
   const values = [
     {
       icon: Target,
-      title: 'Mission-Driven',
-      description: 'We are committed to delivering exceptional results that exceed client expectations.'
+      title: 'Innovation Focus',
+      description: 'At our core, we prioritize innovation to drive measurable results and long-term success.'
     },
     {
       icon: Users,
-      title: 'Client-Centric',
-      description: 'Your success is our priority. We build partnerships, not just projects.'
+      title: 'Partnership Approach',
+      description: 'We build lasting partnerships with our clients, focusing on their growth and success.'
     },
     {
       icon: Zap,
-      title: 'Innovation First',
-      description: 'We stay ahead of technology trends to bring you cutting-edge solutions.'
+      title: 'Scalable Solutions',
+      description: 'Every digital product we create is designed to grow with your business needs.'
     },
     {
       icon: Heart,
-      title: 'Passionate Team',
-      description: 'Our dedicated experts love what they do and it shows in every project.'
+      title: 'User-Centered Design',
+      description: 'We put users at the center of everything we create, ensuring exceptional experiences.'
     },
     {
       icon: Globe,
-      title: 'Global Impact',
-      description: 'We serve clients worldwide with localized expertise and global standards.'
+      title: 'Global Expertise',
+      description: 'With 7+ years of experience, we serve clients across the globe with proven solutions.'
     },
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'Quality and perfection are not just goals, they are our standards.'
+      title: 'Uncompromising Quality',
+      description: 'Our commitment to excellence means never compromising on quality or integrity.'
     }
   ];
 
   const stats = [
+    { number: '7+', label: 'Years Experience' },
     { number: '500+', label: 'Happy Clients' },
     { number: '1000+', label: 'Projects Completed' },
-    { number: '15+', label: 'Countries Served' },
-    { number: '99%', label: 'Client Retention' }
+    { number: '15+', label: 'Countries Served' }
   ];
 
   const containerVariants = {
@@ -85,10 +85,10 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="gradient-text">TechVision</span>
+            Empowering Business Growth Through <span className="gradient-text">Innovative Technology</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Pioneering digital transformation since 2010, we've been at the forefront of innovation
+            With over 7 years of proven expertise in software development, our team excels in delivering high-performance web applications, IoT solutions, and seamless API integrations for clients across the globe.
           </p>
         </motion.div>
 
@@ -102,20 +102,17 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold mb-6 text-white">
-              Building the Future, One Innovation at a Time
+              Innovation, Scalability, and User-Focused Design
             </h3>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                Founded in 2010, TechVision has grown from a small startup to a leading IT solutions provider, 
-                serving clients across the globe with cutting-edge technology and innovative approaches.
+                At our core, we prioritize innovation, scalability, and user-focused design — ensuring every digital product we create drives measurable results and long-term success for our partners.
               </p>
               <p>
-                Our team of expert developers, designers, and consultants work tirelessly to transform 
-                complex challenges into elegant solutions that drive business growth and digital transformation.
+                We stand firmly against complacency and compromise, driven by the belief that true progress emerges from clarity, integrity, and purpose. In a world often distracted by short-term gains, we remain focused on creating lasting impact through dedication, innovation, and thoughtful execution.
               </p>
               <p>
-                We believe in the power of technology to change the world, and we're committed to 
-                making that vision a reality for our clients every single day.
+                Our vision isn't built on convenience — it's built on commitment: a commitment to excellence, continuous growth, and doing what's right, even when it's not easy.
               </p>
             </div>
 
@@ -150,10 +147,10 @@ const About = () => {
               <div className="aspect-video bg-gradient-to-br from-primary-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-primary-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <Zap className="w-12 h-12 text-white" />
+                    <Target className="w-12 h-12 text-white" />
                   </div>
-                  <h4 className="text-2xl font-bold text-white mb-2">Innovation Hub</h4>
-                  <p className="text-gray-300">Where ideas become reality</p>
+                  <h4 className="text-2xl font-bold text-white mb-2">Excellence & Commitment</h4>
+                  <p className="text-gray-300">Building lasting impact through innovation</p>
                 </div>
               </div>
             </div>

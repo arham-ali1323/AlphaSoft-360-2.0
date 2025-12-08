@@ -40,9 +40,9 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Mail, value: 'hello@techvision.com', href: 'mailto:hello@techvision.com' },
-    { icon: Phone, value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, value: 'San Francisco, CA', href: '#' }
+    { icon: Mail, value: 'alphasoft360@gmail.com', href: 'mailto:alphasoft360@gmail.com' },
+    { icon: Phone, value: '+92 370 4857471', href: 'tel:+923704857471' },
+    { icon: MapPin, value: 'Main Pakavenue Rd, Sahiwal, 57000, Pakistan', href: 'https://maps.google.com/?q=Main+Pakavenue+Rd+Sahiwal+57000+Pakistan' }
   ];
 
   const containerVariants = {

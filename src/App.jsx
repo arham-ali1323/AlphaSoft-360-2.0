@@ -12,6 +12,7 @@ import Projects from './pages/Projects.jsx';
 import Team from './pages/Team.jsx';
 import TeamMemberDetails from './pages/TeamMemberDetails.jsx';
 import ProjectDetails from './pages/ProjectDetails.jsx';
+import ServiceDetails from './pages/ServiceDetails.jsx';
 import FAQ from './pages/FAQ.jsx';
 import Contact from './pages/Contact.jsx';
 
@@ -27,6 +28,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/:id" element={<ServiceDetails />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/projects/:id" element={<ProjectDetails />} />
               <Route path="/team" element={<Team />} />

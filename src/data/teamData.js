@@ -18,8 +18,8 @@ const teamMembers = [
     role: "Full Stack Developer",
     bio: "Expert in agile methodologies with a track record of delivering enterprise projects on time and within scope.",
     contact: {
-      email: "alphasoft@gmail.com",
-      phone: "+92 370 6510421",
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 4857471",
     },
     biography: [
       " I am a highly experienced Full Stack Developer with over 7 years of expertise in web application development, IoT applications, and API integrations. Throughout my career, I have utilized cutting-edge technologies to build scalable, high-performance applications, delivering impactful solutions across various domains. Here's a summary of my key skills and experience",
@@ -58,8 +58,8 @@ const teamMembers = [
     role: "Full Stack Laravel Developer",
     bio: "Expert in agile methodologies with a track record of delivering enterprise projects on time and within scope.",
     contact: {
-      email: "maroofsultan.dev@gmail.com",
-      phone: "+92 310 6510421",
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 4857471",
     },
     biography: [
       "Maroof Sultan is a full-stack developer skilled in Laravel, Next.js, Symfony, OpenCart, Python, and CI/CD pipelines. He specializes in designing responsive, high-performance web applications with clean, scalable architectures.",
@@ -96,7 +96,7 @@ const teamMembers = [
     role: "Full Stack Developer",
     bio: "Skilled in modern web technologies with a proven ability to deliver robust, scalable, and efficient software solutions.",
     contact: {
-      email: "shahbaz.dev012@gmail.com",
+      email: "alphasoft360@gmail.com",
       phone: "+92 323 2155122",
     },
     biography: [
@@ -131,8 +131,8 @@ const teamMembers = [
     role: "Full-Stack Next.js & Laravel+Vue.js Developer",
     bio: "Dynamic Full-stack Software Engineer with expertise in modern web technologies, generative AI, and cloud solutions, dedicated to crafting scalable and innovative applications.",
     contact: {
-      email: "eng.muazam@gmail.com",
-      phone: "+92 303 4510773",
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 4857471",
     },
     biography: [
       "Muazam Mughal is a versatile Full Stack Software Engineer proficient in Next.js, React.js, TypeScript, Laravel, Vue.js, Python, FastAPI, and cutting-edge generative AI technologies. He excels in architecting robust, scalable web applications that prioritize performance, security, and exceptional user experiences.",
@@ -165,10 +165,10 @@ const teamMembers = [
     image: arham_ali,
     name: "Arham Ali",
     role: "Frontend Developer (React • Next.js • Tailwind)",
-    bio: "Frontend Developer at AlphaSoft360 specializing in clean, responsive, and modern web interfaces.",
+    bio: "Frontend Developer at AlphaSoft360, specializing in building clean, responsive, and modern web interfaces focused on performance and user experience.",
     contact: {
-      email: "arham.ali1323@gmail.com",
-      phone: "+92 321 1051323",
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 4857471",
     },
     biography: [
       "Arham Ali is a Front-End Developer specializing in React, Next.js, JavaScript, and Tailwind CSS. He builds fast, scalable, and pixel-perfect user interfaces with a strong focus on modern UI/UX standards.",
@@ -232,10 +232,10 @@ const teamMembers = [
     image: faizan_ali,
     name: "Faizan Ali",
     role: "Front-End Developer",
-    bio: "A Front-End Web Developer skilled in building responsive, user-focused interfaces with clean and efficient code. Experienced in modern UI development with strong understanding of backend concepts for seamless integration. Passionate about learning, improving UX, and delivering high-quality digital products.",
+    bio: "Front-End Web Developer skilled in creating responsive, user-focused interfaces with clean, efficient code. Experienced in modern UI development and familiar with backend concepts. Passionate about learning, improving UX, and delivering high-quality digital products.",
     contact: {
-      email: "faizandevx@gmail.com",
-      phone: "+92 347 3057550",
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 4857471",
     },
     biography: [
       "Faizan Ali is a dedicated Front-End Developer with expertise in creating responsive, high-performance, and visually appealing web interfaces using modern technologies like HTML5, CSS3, JavaScript (ES6+), and Bootstrap 5.",
@@ -271,10 +271,10 @@ const teamMembers = [
     image: ahmed_hassan,
     name: "Ahmad Hassan Zafar",
     role: "Frontend Developer",
-    bio: "Turning data and insights into meaningful business strategies that drive performance. I focus on analyzing trends, identifying opportunities, and crafting solutions that support smarter decision-making. With a strong commitment to accuracy, strategic thinking, and continuous improvement, I help transform raw information into actionable results that create real business value.",
+    bio: "Turning data and insights into strategies that drive performance. I analyze trends, identify opportunities, and craft solutions that support smarter decisions—transforming raw information into actionable results that create real business value.",
     contact: {
-      email: "ahassandevx@gmail.com",
-      phone: "+92 327 1888082",
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 4857471",
     },
     biography: [
       " Ahmad Hassan is a passionate Web Developer skilled in HTML, CSS, Bootstrap, and JavaScript, dedicated to creating modern, responsive, and user-friendly websites. He focuses on clean code and elegant design to deliver seamless digital experiences.",
@@ -309,8 +309,8 @@ const teamMembers = [
     role: "Front-End Web Developer",
     bio: "A creative and results-driven Front-End Developer with a strong focus on responsive, visually engaging, and user-friendly web interfaces. Skilled in turning ideas into high-performing designs using modern technologies, and committed to clean code and continuous improvement.",
     contact: {
-      email: "sameerxdev@gmail.com",
-      phone: "+92 321 6903462"
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 4857471"
     },
     biography: [
       "Sameer Akhtar is a dedicated Front-End Developer skilled in HTML5, CSS3, JavaScript (ES6+), and Bootstrap 5. He specializes in building clean, responsive, and modern interfaces that balance functionality with aesthetic appeal.",
@@ -347,8 +347,8 @@ const teamMembers = [
     role: "Front-End Web Developer",
     bio: "A passionate and detail-oriented Front-End Developer with a strong focus on creating responsive, user-friendly, and visually appealing web interfaces. Skilled in transforming ideas into functional designs and ensuring seamless user experiences through clean, efficient, and accessible code. Always eager to learn new technologies and improve development workflows.",
     contact: {
-      email: "ubaidullah.web.dev@gmail.com",
-      phone: "+92 328 7231804",
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 4857471",
     },
     biography: [
       "Ubaidullah is a passionate Front-End Web Developer dedicated to crafting elegant, responsive, and accessible web experiences using modern technologies such as HTML5, CSS,  JavaScript (ES6+), and Bootstrap.",
@@ -384,8 +384,8 @@ const teamMembers = [
     role: "Front-End Web Developer",
     bio: "A motivated and detail-oriented Front-End Developer currently pursuing a BS in Artificial Intelligence. Passionate about building modern, responsive, and user-friendly web interfaces using HTML, CSS, JavaScript, and Bootstrap. Actively learning and improving skills to create clean, efficient code and deliver professional-quality digital experiences.",
     contact: {
-      email: "ali.xdev77@gmail.com",
-      phone: "+92 327 4686432",
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 4857471",
     },
     biography: [
       "Ali Hassan is an aspiring Front-End Web Developer currently pursuing a BS in Artificial Intelligence. He enjoys creating visually appealing, responsive, and functional web interfaces using HTML, CSS, JavaScript (ES6+), and Bootstrap 5.",

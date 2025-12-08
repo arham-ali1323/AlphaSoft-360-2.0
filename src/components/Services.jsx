@@ -1,52 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Database, Cloud, Shield, Smartphone, Globe, Cpu, BarChart } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import servicesData from '../data/servicesData.js';
 
 const Services = () => {
-  const services = [
-    {
-      icon: Code,
-      title: 'Web Development',
-      description: 'Custom web applications built with modern frameworks and cutting-edge technologies.',
-      features: ['React/Vue/Angular', 'Node.js/Python', 'RESTful APIs', 'Progressive Web Apps'],
-      gradient: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['React Native', 'Flutter', 'Swift/Kotlin', 'App Store Deployment'],
-      gradient: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      features: ['AWS/Azure/GCP', 'DevOps & CI/CD', 'Microservices', 'Serverless Architecture'],
-      gradient: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Database,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics solutions.',
-      features: ['Big Data Processing', 'Machine Learning', 'Data Visualization', 'Predictive Analytics'],
-      gradient: 'from-orange-500 to-red-500'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance Management', '24/7 Monitoring'],
-      gradient: 'from-indigo-500 to-purple-500'
-    },
-    {
-      icon: Cpu,
-      title: 'AI & Machine Learning',
-      description: 'Intelligent solutions powered by artificial intelligence and machine learning.',
-      features: ['Natural Language Processing', 'Computer Vision', 'Deep Learning', 'AI Integration'],
-      gradient: 'from-pink-500 to-rose-500'
-    }
-  ];
+  const navigate = useNavigate();
+
+  const handleServiceClick = (serviceId) => {
+    navigate(`/services/${serviceId}`);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -105,18 +68,23 @@ const Services = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {services.map((service, index) => (
+          {servicesData.map((service) => (
             <motion.div
-              key={index}
+              key={service.id}
               variants={itemVariants}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative"
+              className="group relative cursor-pointer"
+              onClick={() => handleServiceClick(service.id)}
             >
               {/* Card */}
               <div className="glass-effect rounded-2xl p-8 h-full transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary-500/20 border border-white/10">
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.gradient} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-full h-full text-white" />
+                <div className="w-16 h-16 rounded-xl overflow-hidden mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <img 
+                    src={service.img} 
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Content */}
@@ -128,18 +96,23 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                {/* Features */}
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-400 text-sm">
+                {/* Skills Preview */}
+                <div className="space-y-2">
+                  {service.skills.slice(0, 3).map((skill, idx) => (
+                    <div key={idx} className="flex items-center text-gray-400 text-sm">
                       <div className="w-1.5 h-1.5 bg-primary-400 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
+                      <span>{skill.name}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
 
                 {/* Hover Effect */}
-                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`}></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-500/20 to-primary-600/20 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
+                
+                {/* Click Hint */}
+                <div className="absolute bottom-4 left-4 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  Click for details
+                </div>
               </div>
             </motion.div>
           ))}
@@ -160,7 +133,10 @@ const Services = () => {
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               We specialize in creating tailored solutions that address your specific business challenges
             </p>
-            <button className="btn-primary">
+            <button 
+              onClick={() => navigate('/contact')}
+              className="btn-primary"
+            >
               Discuss Your Project
             </button>
           </div>
