@@ -13,6 +13,8 @@ const Layout = ({ children }) => {
     >
       {children}
     </main>
+
+    
   );
 };
 
